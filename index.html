@@ -8,18 +8,22 @@
   <script type="text/javascript" src="script.js"></script>
 </head>
 <body onload="init()">
-  <h1>
+  <header>
     Will's Sight Words
-  </h1>
-  <input type="checkbox" id="include_A" />
-  <label>Include group A</label>
-  <br />
-  <input type="checkbox" id="include_B" />
-  <label>Include group B</label>
-  <br />
-  <input type="button" value="Start" id="start" />
-  <div id="card"></div>
-  <input type="button" value="Good" id = "good"/>
-  <input type="button" value="Review" id = "review" />
+  </header>
+  <div id="config">
+    <input type="checkbox" id="include_A" />
+    <label>Include group A</label>
+    <br />
+    <input type="checkbox" id="include_B" />
+    <label>Include group B</label>
+    <br />
+    <input type="button" value="Start" id="start" />
+  </div>
+  <div id="game">
+    <div id="card"></div>
+    <input type="button" value="Good" id = "good" />
+    <input type="button" value="Review" id = "review" />
+  </div>
 </body>
 </html>
