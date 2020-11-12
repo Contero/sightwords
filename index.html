@@ -1,29 +1,41 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Kindergarten Sight Words</title>
-  <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="script.js"></script>
-</head>
-<body onload="init()">
-  <header>
-    Will's Sight Words
-  </header>
-  <div id="config">
-    <input type="checkbox" id="include_A" />
-    <label>Include group A</label>
-    <br />
-    <input type="checkbox" id="include_B" />
-    <label>Include group B</label>
-    <br />
-    <input type="button" value="Start" id="start" />
-  </div>
-  <div id="game">
-    <div id="card"></div>
-    <input type="button" value="Good" id = "good" />
-    <input type="button" value="Review" id = "review" />
-  </div>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Kindergarten Sight Words</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body onload="init()">
+    <header>
+      Will's Sight Words
+    </header>
+    <main class="center">
+    <div id="config">
+      <div>
+        <input type="checkbox" id="include_A" class="check" />
+        <label>Include group A</label>
+      </div>
+      <div>
+        <input type="checkbox" id="include_B" class="check"  />
+        <label>Include group B</label>
+      </div>
+      <div>
+        <input type="checkbox" id="include_C" class="check"  />
+        <label>Include group C</label>
+      </div>
+      <div>
+        <input type="checkbox" id="include_D" class="check"  />
+        <label>Include group D</label>
+      </div>
+      <input type="button" value="Start" id="start" class="button" />
+    </div>
+    <div id="game">
+      <div id="card"></div>
+      <input type="button" value="Good" id = "good" class="button"  />
+      <input type="button" value="Review" id = "review" class="button"  />
+    </div>
+  </main>
+  </body>
 </html>

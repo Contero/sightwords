@@ -7,10 +7,12 @@ let init = () => {
     $("review").addEventListener("click", review);
 }
 
-let wordsA = ["the", "cow", "sucks"];
-    let wordsB = ["Bthe", "Bcow", "Bsucks"];
-    let words = [];
-    let index = 0;
+let wordsA = ["can", "the", "is", "like", "at", "am","go","see","me","a","to","no","I"];
+let wordsB = ["look", "dad", "he", "mom", "in","it","we","my","on"];
+let wordsC = ["play","for","you","here","said","and","got","are","not","come"];
+let wordsD = ["day","your","looking","went","down","into","she","they","will","where"];
+let words = [];
+let index = 0;
 
 let $ = (id) => {
     return document.getElementById(id);
@@ -25,6 +27,14 @@ let start = () => {
     if ($("include_B").checked == true) {
         wordsB.forEach(w => words.push(w));
     }
+
+    if ($("include_C").checked == true) {
+        wordsC.forEach(w => words.push(w));
+    }
+
+    if ($("include_D").checked == true) {
+        wordsD.forEach(w => words.push(w));
+    }
     
     for (let i = 0; i < words.length; i++) {
         let temp = words[i];
@@ -33,6 +43,8 @@ let start = () => {
         words[rand] = temp;
     }
 
+    $("game").style.display="block";
+    $("config").style.display="none";
     index = 0;
     nextCard();
 };
@@ -44,7 +56,8 @@ let nextCard = () => {
         }
         $("card").innerHTML = words[index];
     } else {
-        $("card").innerHTML = "GOOD JOB!!";
+        $("game").style.display="none";
+        $("config").style.display="block";
     }
 };
 
@@ -56,5 +69,4 @@ let good = () => {
 let review = () => {
     index++;
     nextCard();
-}
-
+};

@@ -1,10 +1,82 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background-color: #bbb;
+}
+
+header {
+    background-color: cornflowerblue;
+    color: darkblue;
+    padding: 10px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
 #card {
     width: 500px;
     min-height: 100px;
     border: 2px solid #000000;
-    box-shadow: 2px 2px #333;
+    box-shadow: 5px 5px #666;
     text-align: center;
     font-size: 100px;
     padding-top: 75px;
     padding-bottom: 75px;
+    margin:auto;
+    margin-bottom: 50px;
+    background-color: #FFF;
+}
+
+.center { 
+    margin:auto;
+    width: 600px;
+} 
+
+#game {
+    display:none;
+}
+
+input.check {
+    width:25px;
+    height:25px;
+    vertical-align:middle;
+}
+
+.button {
+    height:75px;
+    width:200px;
+    background-color: blue;
+    color:white;
+    font-size:50px;
+}
+
+#good {
+    float:right;
+    margin-right:50px;
+}
+
+#review {
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+
+#start {
+    margin-left:175px;
+    margin-top: 25px;
+}
+
+#config {
+    font-size: 20px;
+    padding:25px;
+}
+
+main {
+    background-color: #c7c7ff;
+}
+
+label {
+    vertical-align:middle;
+}
+
+#game {
+    padding-top:50px;
 }
