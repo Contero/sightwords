@@ -4,10 +4,22 @@
 <head>
   <meta charset="utf-8">
   <title>Kindergarten Sight Words</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
 </head>
-<body>
+<body onload="init()">
   <h1>
-    Go away, world
+    Will's Sight Words
   </h1>
+  <input type="checkbox" id="include_A" />
+  <label>Include group A</label>
+  <br />
+  <input type="checkbox" id="include_B" />
+  <label>Include group B</label>
+  <br />
+  <input type="button" value="Start" id="start" />
+  <div id="card"></div>
+  <input type="button" value="Good" id = "good"/>
+  <input type="button" value="Review" id = "review" />
 </body>
 </html>
