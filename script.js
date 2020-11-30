@@ -7,6 +7,8 @@ let init = () => {
     $("review").addEventListener("click", review);
 }
 
+let uppercase=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+let lowercase=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 let wordsA = ["can", "the", "is", "like", "at", "am","go","see","me","a","to","no","I"];
 let wordsB = ["look", "dad", "he", "mom", "in","it","we","my","on"];
 let wordsC = ["play","for","you","here","said","and","got","are","not","come"];
@@ -20,6 +22,14 @@ let $ = (id) => {
 
 let start = () => {
     words=[];
+    if ($("include_U").checked == true) {
+        uppercase.forEach(w => words.push(w));
+    }
+    
+    if ($("include_l").checked == true) {
+        lowercase.forEach(w => words.push(w));
+    }
+    
     if ($("include_A").checked == true) {
         wordsA.forEach(w => words.push(w));
     }
