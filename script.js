@@ -16,33 +16,32 @@ let wordsD = ["day","your","looking","went","down","into","she","they","will","w
 let words = [];
 let index = 0;
 
-let $ = (id) => {
-    return document.getElementById(id);
-}
+let $ = (id) => document.getElementById(id);
+
 
 let start = () => {
     words=[];
-    if ($("include_U").checked == true) {
+    if ($("include_U").checked) {
         uppercase.forEach(w => words.push(w));
     }
     
-    if ($("include_l").checked == true) {
+    if ($("include_l").checked) {
         lowercase.forEach(w => words.push(w));
     }
     
-    if ($("include_A").checked == true) {
+    if ($("include_A").checked) {
         wordsA.forEach(w => words.push(w));
     }
 
-    if ($("include_B").checked == true) {
+    if ($("include_B").checked) {
         wordsB.forEach(w => words.push(w));
     }
 
-    if ($("include_C").checked == true) {
+    if ($("include_C").checked) {
         wordsC.forEach(w => words.push(w));
     }
 
-    if ($("include_D").checked == true) {
+    if ($("include_D").checked) {
         wordsD.forEach(w => words.push(w));
     }
     
