@@ -7,36 +7,13 @@
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="script.js"></script>
   </head>
-  <body onload="init()">
+  <body id="body">
     <header>
       Will's Sight Words
     </header>
     <main class="center">
     <div id="config">
-      <div>
-        <input type="checkbox" id="include_U" class="check" />
-        <label>Include uppercase Letters</label>
-      </div>
-      <div>
-        <input type="checkbox" id="include_l" class="check" />
-        <label>Include lowercase Letters</label>
-      </div>
-      <div>
-        <input type="checkbox" id="include_A" class="check" />
-        <label>Include group A</label>
-      </div>
-      <div>
-        <input type="checkbox" id="include_B" class="check"  />
-        <label>Include group B</label>
-      </div>
-      <div>
-        <input type="checkbox" id="include_C" class="check"  />
-        <label>Include group C</label>
-      </div>
-      <div>
-        <input type="checkbox" id="include_D" class="check"  />
-        <label>Include group D</label>
-      </div>
+      <div id = 'checks'></div>
       <input type="button" value="Start" id="start" class="button" />
     </div>
     <div id="game">

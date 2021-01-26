@@ -1,48 +1,49 @@
 "use strict;"
 
-// init
-let init = () => {
-    $("start").addEventListener("click", start);
-    $("good").addEventListener("click", good);
-    $("review").addEventListener("click", review);
+let wordData = [{
+    tag: "Uppercase Letters",
+    id: "uppercase",
+    words: ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+},{
+    tag: "Lowercase Letters",
+    id: "lowercase",
+    words: ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+},{
+    tag: "Group A Words",
+    id: "groupA",
+    words: ["can", "the", "is", "like", "at", "am","go","see","me","a","to","no","I"]
+},{
+    tag: "Group B Words",
+    id: "groupB",
+    words: ["look", "dad", "he", "mom", "in","it","we","my","on","up"]
+},{
+    tag:  "Group C Words",
+    id: "groupC",
+    words: ["play","for","you","here","said","and","got","are","not","come"]
+},{
+    tag: "Group D Words",
+    id: "groupD",
+    words: ["day","your","looking","went","down","into","she","they","will","where"]
 }
 
-let uppercase=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-let lowercase=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-let wordsA = ["can", "the", "is", "like", "at", "am","go","see","me","a","to","no","I"];
-let wordsB = ["look", "dad", "he", "mom", "in","it","we","my","on"];
-let wordsC = ["play","for","you","here","said","and","got","are","not","come"];
-let wordsD = ["day","your","looking","went","down","into","she","they","will","where"];
+];
+
 let words = [];
 let index = 0;
 
 let $ = (id) => document.getElementById(id);
+let $$ = (clas) => document.getElementsByClassName(clas);
 
 
 let start = () => {
     words=[];
-    if ($("include_U").checked) {
-        uppercase.forEach(w => words.push(w));
-    }
     
-    if ($("include_l").checked) {
-        lowercase.forEach(w => words.push(w));
-    }
-    
-    if ($("include_A").checked) {
-        wordsA.forEach(w => words.push(w));
-    }
-
-    if ($("include_B").checked) {
-        wordsB.forEach(w => words.push(w));
-    }
-
-    if ($("include_C").checked) {
-        wordsC.forEach(w => words.push(w));
-    }
-
-    if ($("include_D").checked) {
-        wordsD.forEach(w => words.push(w));
+    for (let c of $$('check'))
+    {
+        if($(c.id).checked)
+        {
+            wordData.find(o => o.id === c.id).words.forEach(w => words.push(w));
+        }
     }
     
     for (let i = 0; i < words.length; i++) {
@@ -78,4 +79,17 @@ let good = () => {
 let review = () => {
     index++;
     nextCard();
+};
+
+window.onload = () => {
+    let html = "";
+    for (let o of wordData) {
+        html+= "<div><input type='checkbox' id=" + o.id + " class='check' /><label>Include " + o.tag + "</label>";
+    }
+
+    $("checks").innerHTML = html;
+
+    $("start").addEventListener("click", start);
+    $("good").addEventListener("click", good);
+    $("review").addEventListener("click", review);
 };
