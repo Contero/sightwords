@@ -24,6 +24,30 @@ let wordData = [{
     tag: "Group D Words",
     id: "groupD",
     words: ["day","your","looking","went","down","into","she","they","will","where"]
+},{
+    tag: "Red Card Words",
+    id: "red",
+    color: "Red",
+    words: ["the", "and", "of", "a", "to", "is", "in", "you"]
+},{
+    tag: "Orange Card Words",
+    id: "orange",
+    color: "Coral",
+    words: ["that", "it", "he","for", "was", "his", "are", "as", "with", "on", "they", "at", "had", "this", "have", "I"]
+},{
+    tag: "Yellow Card Words",
+    id: "yellow",
+    color: "Yellow",
+    words: ["from", "or", "by", "one", "be", "not", "all", "what", "but", "were", "when", "we", "there", "can", "an", "your", "which", "their", "if", "said", "about", "will",
+        "them", "do", "out", "up", "how", "each", "then", "she", "many", "some", "so", "these", "would", "other", "into", "has", "more", "her", "two", "like", "him", "see", 
+        "time", "could", "no", "make", "than", "first", "been", "people", "use", "down", "now", "my", "made", "did", "over", "its", "only", "way", "little", "who", "may", "water",
+        "long", "find", "very", "after", "words", "called", "just", "where", "most", "know", "me", "went", "becasue", "day"]
+},{
+    tag: "Green Card Words",
+    id: "green",
+    color: "YellowGreen",
+    words: ["go", "get", "got", "came", "back", "saw", "home", "house", "around", "think", "mother", "our", "don't", "school", "am", "well", "put", "man", "didn't", "us", "thing",
+            "too", "through", "much", "good", "new", "write", "look", "also", "any", "same", "right"]
 }
 
 ];
@@ -42,7 +66,9 @@ let start = () => {
     {
         if($(c.id).checked)
         {
-            wordData.find(o => o.id === c.id).words.forEach(w => words.push(w));
+            let obj = wordData.find(o => o.id === c.id);
+            
+             obj.words.forEach(w => words.push({word: w, color: obj.color}));
         }
     }
     
@@ -64,7 +90,13 @@ let nextCard = () => {
         if (index >= words.length ) {
             index = 0;
         }
-        $("card").innerHTML = words[index];
+        if (words[index].color) {
+            $("card").style.backgroundColor = words[index].color;
+
+        } else {
+            $("card").style.backgroundColor = "#FFF";
+        }
+        $("card").innerHTML = words[index].word;
     } else {
         $("game").style.display="none";
         $("config").style.display="block";

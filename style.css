@@ -12,6 +12,12 @@ header {
     font-weight: bold;
 }
 
+@media screen and (max-height: 600px) {
+    header {
+      display: none;
+    }
+  }
+
 #card {
     width: 500px;
     min-height: 100px;
@@ -28,7 +34,7 @@ header {
 
 .center { 
     margin:auto;
-    width: 600px;
+    width: 700px;
 } 
 
 #game {
