@@ -41,7 +41,7 @@ let wordData = [{
     words: ["from", "or", "by", "one", "be", "not", "all", "what", "but", "were", "when", "we", "there", "can", "an", "your", "which", "their", "if", "said", "about", "will",
         "them", "do", "out", "up", "how", "each", "then", "she", "many", "some", "so", "these", "would", "other", "into", "has", "more", "her", "two", "like", "him", "see", 
         "time", "could", "no", "make", "than", "first", "been", "people", "use", "down", "now", "my", "made", "did", "over", "its", "only", "way", "little", "who", "may", "water",
-        "long", "find", "very", "after", "words", "called", "just", "where", "most", "know", "me", "went", "becasue", "day"]
+        "long", "find", "very", "after", "words", "called", "just", "where", "most", "know", "me", "went", "because", "day"]
 },{
     tag: "Green Card Words",
     id: "green",
